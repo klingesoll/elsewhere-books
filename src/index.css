@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap');
+
+:root {
+  --bg-color: #E8E8E8;
+  --line-color: #000000;
+  --highlight-purple: #C4AEEA;
+  --highlight-blue: #DDF0FC;
+  --pure-white: #FFFFFF;
+  --font-ui: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-literary: 'Noto Serif SC', 'Songti SC', STSong, serif;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--line-color);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  padding: 2vw;
+}
+
+a { color: var(--line-color); text-decoration: none; }
+a:hover { text-decoration: underline; }
