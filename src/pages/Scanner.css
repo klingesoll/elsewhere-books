@@ -1,0 +1,679 @@
+/* ── Shell ── */
+.sc-shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color);
+  font-family: var(--font-ui);
+  overflow-x: hidden;
+}
+
+.sc-shell-dark { background: #111; }
+.sc-shell-purple { background: var(--highlight-purple); }
+
+/* ── Top bar ── */
+.sc-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--line-color);
+  background: var(--pure-white);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.sc-topbar-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sc-back {
+  font-size: 0.8rem;
+  font-family: var(--font-ui);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  color: var(--line-color);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+.sc-badge {
+  background: var(--highlight-purple);
+  border: 1px solid var(--line-color);
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.sc-save-btn {
+  background: var(--line-color);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+/* ── Capture zone ── */
+.sc-capture-zone {
+  flex: 1;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+  min-height: 55dvh;
+  transition: background 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sc-capture-zone:active {
+  background: #1a1a1a;
+}
+
+.sc-camera-icon {
+  opacity: 0.85;
+}
+
+.sc-camera-label {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sc-camera-hint {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+/* ── Error ── */
+.sc-error {
+  background: #fdd;
+  border-top: 1px solid #f99;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+/* ── Saved panel ── */
+.sc-saved-panel {
+  border-top: 1px solid var(--line-color);
+  background: var(--bg-color);
+}
+
+.sc-saved-header {
+  padding: 0.6rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  color: #555;
+}
+
+.sc-saved-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.sc-saved-thumb {
+  width: 36px;
+  height: 52px;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.sc-saved-name {
+  font-family: var(--font-literary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.sc-saved-meta {
+  font-size: 0.72rem;
+  color: #888;
+  font-family: var(--font-mono);
+  margin-top: 0.15rem;
+}
+
+/* ── Scanning overlay ── */
+.sc-bg-img {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35);
+  z-index: 0;
+}
+
+.sc-scanning-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sc-scan-line {
+  width: 70vw;
+  max-width: 300px;
+  height: 2px;
+  background: var(--highlight-purple);
+  box-shadow: 0 0 16px 4px rgba(196,174,234,0.8);
+  animation: scanMove 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes scanMove {
+  from { transform: translateY(-80px); opacity: 0.6; }
+  to   { transform: translateY( 80px); opacity: 1; }
+}
+
+.sc-scanning-text {
+  color: white;
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* ── Saved confirm ── */
+.sc-saved-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 0.5rem;
+  padding: 3rem 2rem;
+  min-height: 100dvh;
+}
+
+.sc-check {
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--line-color);
+}
+
+.sc-saved-msg {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.sc-saved-book {
+  font-family: var(--font-literary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sc-saved-sku {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #555;
+}
+
+/* ── Review ── */
+.sc-review {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.sc-preview-strip {
+  position: relative;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line-color);
+}
+
+.sc-review-thumb {
+  height: 160px;
+  width: auto;
+  object-fit: contain;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+
+.sc-sku-badge {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 1rem;
+  background: var(--bg-color);
+  border: 1px solid var(--line-color);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.15rem 0.4rem;
+}
+
+/* ── Fields ── */
+.sc-fields {
+  padding: 0.5rem 0;
+}
+
+.sc-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.sc-row-full {
+  grid-template-columns: 72px 1fr;
+  align-items: flex-start;
+}
+
+.sc-row-label {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #777;
+  white-space: nowrap;
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+
+.sc-row-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  width: 100%;
+  color: var(--line-color);
+}
+
+.sc-row-input:focus {
+  background: var(--highlight-blue);
+}
+
+.sc-row-textarea {
+  min-height: 70px;
+  resize: none;
+  font-family: var(--font-literary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* ── Save button ── */
+.sc-save-full {
+  margin: 1.25rem 1rem 0;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  background: var(--line-color);
+  color: white;
+  border: none;
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sc-save-full:active {
+  background: #333;
+}
+
+/* ── Menu ── */
+.sc-menu-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sc-menu-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1rem;
+  background: var(--pure-white);
+  border-bottom: 1px solid var(--line-color);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s;
+}
+
+.sc-menu-card:active { background: var(--highlight-blue); }
+
+.sc-menu-icon {
+  font-size: 1.6rem;
+  width: 2rem;
+  text-align: center;
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+}
+
+.sc-menu-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.sc-menu-hint {
+  font-size: 0.72rem;
+  color: #888;
+  font-family: var(--font-mono);
+  margin-top: 0.1rem;
+}
+
+.sc-menu-arrow {
+  margin-left: auto;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.sc-menu-divider {
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: #aaa;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: var(--bg-color);
+}
+
+/* ── ISBN ── */
+.sc-isbn-body {
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sc-isbn-hint {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: #666;
+  line-height: 1.4;
+}
+
+.sc-isbn-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sc-isbn-input {
+  flex: 1;
+  background: var(--pure-white);
+  border: 1px solid var(--line-color);
+  padding: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  outline: none;
+}
+
+.sc-isbn-input:focus { background: var(--highlight-blue); }
+
+.sc-isbn-go {
+  background: var(--line-color);
+  color: white;
+  border: none;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  min-width: 56px;
+}
+
+.sc-isbn-tip {
+  font-size: 0.72rem;
+  color: #aaa;
+  font-family: var(--font-mono);
+  line-height: 1.5;
+  border-left: 2px solid var(--highlight-purple);
+  padding-left: 0.75rem;
+}
+
+/* ── Export ── */
+.sc-badge-btn {
+  background: var(--highlight-purple);
+  border: 1px solid var(--line-color);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+}
+
+.sc-saved-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.sc-export-btn {
+  background: var(--line-color);
+  color: white;
+  border: none;
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+}
+
+.sc-thumb-placeholder {
+  background: #eee;
+  border: 1px dashed #ccc;
+}
+
+/* ── Photo row: camera + library side by side ── */
+.sc-photo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line-color);
+}
+
+.sc-capture-half {
+  min-height: 160px;
+}
+
+.sc-library-zone {
+  background: #1a1a2e;
+}
+
+.sc-library-zone:active {
+  background: #22223a;
+}
+
+/* ── Instructions ── */
+.sc-instructions {
+  padding: 1rem;
+  border-bottom: 1px solid var(--line-color);
+  background: var(--pure-white);
+}
+
+.sc-step-guide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sc-guide-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.sc-guide-num {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: var(--line-color);
+  color: white;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sc-guide-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.1rem;
+}
+
+.sc-guide-hint {
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.4;
+  font-family: var(--font-mono);
+}
+
+.sc-guide-arrow {
+  padding-left: 10px;
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+/* ── Menu actions ── */
+.sc-menu-actions {
+  padding: 1rem;
+}
+
+/* ── Identified bar ── */
+.sc-identified-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #f0faf0;
+  border-bottom: 1px solid var(--line-color);
+}
+
+.sc-id-thumb {
+  width: 40px;
+  height: 56px;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.sc-id-title {
+  font-family: var(--font-literary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.sc-id-author {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.1rem;
+}
+
+.sc-id-check {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: #2a7a2a;
+  white-space: nowrap;
+}
+
+/* ── Price hint ── */
+.sc-price-hint {
+  padding: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.sc-hint-sub {
+  font-size: 0.75rem;
+  color: #888;
+  font-family: var(--font-mono);
+  margin-top: 0.25rem;
+}
+
+/* ── Lookup button ── */
+.sc-lookup-btn {
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  padding: 0.75rem;
+  background: var(--highlight-blue);
+  border: 1px solid var(--line-color);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+
+.sc-lookup-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Review preview strip (two thumbs) ── */
+.sc-review-thumb-price {
+  margin-left: 0.5rem;
+  opacity: 0.8;
+}
+
+/* ── Saved row ── */
+.sc-saved-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sc-saved-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.sc-export-btn {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  background: var(--line-color);
+  color: white;
+  border: none;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+}

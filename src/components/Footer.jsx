@@ -62,7 +62,7 @@ export default function Footer() {
         style={{ textAlign: 'right', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
       >
         <p className="text" style={{ fontSize: '0.8rem', fontFamily: 'var(--font-mono)' }}>
-          © 2024 ELSEWHERE BOOKS<br />
+          © {new Date().getFullYear()} ELSEWHERE BOOKS<br />
           ALL RIGHTS RESERVED.<br />
           BUILT IN THE VOID.
         </p>

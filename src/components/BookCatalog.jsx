@@ -1,69 +1,111 @@
-import BookCard from './BookCard'
+import { useEffect, useState } from 'react'
+import BookCover from './BookCover'
+import supabase from '../lib/supabase'
+import { QUOTES, READING_LISTS, STATIC_BOOKS } from '../constants/site'
 
-const books = [
-  {
-    imgSrc: 'https://images.pexels.com/photos/101808/pexels-photo-101808.jpeg?auto=compress&cs=tinysrgb&w=600',
-    excerpt: <>「真正的發現之旅非發現新景觀，而是有新的目光。」<br /><br />The real voyage of discovery consists not in seeking new landscapes, but in having new eyes.</>,
-    sku: 'SKU: B-001',
-    price: '¥128.00',
-    titleCn: '追憶似水年華',
-    author: 'Marcel Proust',
-  },
-  {
-    imgSrc: 'https://images.pexels.com/photos/3747468/pexels-photo-3747468.jpeg?auto=compress&cs=tinysrgb&w=600',
-    excerpt: <>「空間並非虛無，它是關係的總和。」<br /><br />Space is not a void; it is the sum of relationships.</>,
-    sku: 'SKU: B-084',
-    price: '¥95.00',
-    titleCn: '空間詩學',
-    author: 'Gaston Bachelard',
-  },
-  {
-    imgSrc: 'https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=600',
-    excerpt: <>「我們建造建築，然後建築塑造我們。」<br /><br />We shape our buildings; thereafter they shape us.</>,
-    sku: 'SKU: B-211',
-    price: '¥150.00',
-    titleCn: '建築十書',
-    author: 'Vitruvius',
-  },
-  {
-    imgSrc: 'https://images.pexels.com/photos/415071/pexels-photo-415071.jpeg?auto=compress&cs=tinysrgb&w=600',
-    excerpt: <>「文字是人類所創造最偉大的幾何學。」<br /><br />Letters are the greatest geometry created by humanity.</>,
-    sku: 'SKU: B-105',
-    price: '¥110.00',
-    titleCn: '網格系統',
-    author: 'Josef Müller-Brockmann',
-  },
-  {
-    imgSrc: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600',
-    excerpt: <>「美存在於物體與物體產生的陰影之間。」<br /><br />Beauty lies in the shadow created between one object and another.</>,
-    sku: 'SKU: B-072',
-    price: '¥88.00',
-    titleCn: '陰翳禮讚',
-    author: "Jun'ichirō Tanizaki",
-  },
-]
+function dbBookToProps(b) {
+  return {
+    sku: b.sku, price: b.price ? `¥${b.price}` : '',
+    titleCn: b.title_cn || b.title_en, author: b.author,
+    excerpt: b.excerpt || '—',
+  }
+}
+
+/** Deduplicate DB rows — multiple copies of the same book collapse into one entry */
+function deduplicateBooks(dbRows) {
+  const seen = new Map()
+  for (const b of dbRows) {
+    const key = b.barcode || b.title_cn || b.title_en || b.id
+    if (!seen.has(key)) seen.set(key, b)
+  }
+  return [...seen.values()].map(dbBookToProps)
+}
 
 export default function BookCatalog() {
+  const [dbBooks, setDbBooks] = useState(null)
+  const [useDb, setUseDb] = useState(false)
+  const [active, setActive] = useState(0)
+
+  useEffect(() => {
+    if (!import.meta.env.VITE_SUPABASE_URL || !supabase) { setDbBooks([]); return }
+    supabase
+      .from('books').select('*').is('sold_in_sale_id', null)
+      .order('created_at', { ascending: false })
+      .then(({ data, error }) => {
+        if (!error && data?.length > 0) { setDbBooks(data); setUseDb(true) }
+        else setDbBooks([])
+      })
+  }, [])
+
+  const books = useDb ? deduplicateBooks(dbBooks) : STATIC_BOOKS
+
+  const marqueeText = QUOTES.map(q => `${q.text} —— ${q.from}`).join('　　　　')
+
   return (
     <main className="main-catalog">
-      {books.map((book, i) => (
-        <BookCard key={i} {...book} />
-      ))}
+      <div className="catalog-header-row">
+        <span className="label">Featured / 精選書目</span>
+        <span className="catalog-hint">HOVER TO BROWSE</span>
+      </div>
+      <div className="accordion">
+        {books.map((book, i) => {
+          const isActive = i === active
+          return (
+            <div
+              key={book.sku || `book-${i}`}
+              className={`accordion-item ${isActive ? 'accordion-item--active' : ''}`}
+              onClick={() => setActive(i)}
+            >
+              <div className="spine" onMouseEnter={() => setActive(i)}>
+                <span className="spine-index">{String(i + 1).padStart(2, '0')}</span>
+                <span className="spine-title">{book.titleCn}</span>
+                <span className="spine-author">{book.author}</span>
+              </div>
+              <div className="accordion-panel">
+                <div className="panel-cover">
+                  <BookCover sku={`SKU: ${book.sku}`} titleCn={book.titleCn} author={book.author} />
+                </div>
+                <div className="panel-text">
+                  <p className="panel-excerpt">{book.excerpt}</p>
+                  <span className="panel-info">SKU: {book.sku} · {book.price}</span>
+                </div>
+              </div>
+            </div>
+          )
+        })}
+      </div>
 
-      {/* Coming Soon card */}
-      <article className="cell book-cell" style={{ backgroundColor: 'var(--highlight-purple)' }}>
-        <div className="book-cover-wrapper">
-          <div className="cross-lines" />
-          <h3 className="title-cn" style={{ position: 'absolute', zIndex: 2, fontSize: '2rem', textAlign: 'center', lineHeight: 1.2 }}>
-            即將<br />出版
-          </h3>
+      {/* Quote marquee */}
+      <div className="marquee-strip">
+        <div className="marquee-track">
+          <span>{marqueeText}</span>
+          <span>{marqueeText}</span>
         </div>
-        <div className="book-meta p-sm" style={{ backgroundColor: 'transparent' }}>
-          <span className="label">Status</span>
-          <h3 className="title-cn">別處期刊 Vol.2</h3>
-          <p className="author">Pre-order / 預購</p>
-        </div>
-      </article>
+      </div>
+
+      {/* Themed reading lists */}
+      <div className="reading-lists-header">
+        <span className="label">Reading Lists / 主題書單</span>
+      </div>
+      <div className="reading-lists">
+        {READING_LISTS.map(list => (
+          <div className="reading-list-card" key={list.id} style={{ '--card-accent': list.color }}>
+            <div className="rl-head">
+              <span className="rl-title-en">{list.titleEn}</span>
+              <h3 className="rl-title">{list.title}</h3>
+              <p className="rl-desc">{list.description}</p>
+            </div>
+            <ol className="rl-books">
+              {list.books.map((b, j) => (
+                <li key={j}>
+                  <span className="rl-book-num">{String(j + 1).padStart(2, '0')}</span>
+                  <span className="rl-book-name">{b}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))}
+      </div>
     </main>
   )
 }
