@@ -1,0 +1,38 @@
+export const IMAGE_ZONES = [
+  {
+    id: 'shelves',
+    number: '01',
+    label: 'Shelves',
+    title: 'Printed Matter Shelves',
+    href: '#shelves',
+    x: 38, y: 45, w: 36, h: 28,
+    copy: 'Zines, books, notes, fragments and reading paths selected from the room.',
+  },
+  {
+    id: 'programme',
+    number: '02',
+    label: 'Programme',
+    title: 'Events Programme',
+    href: '#programme',
+    x: 58, y: 55, w: 22, h: 20,
+    copy: 'Screenings, reading groups, conversations and small gatherings on the calendar.',
+  },
+  {
+    id: 'archive',
+    number: '03',
+    label: 'Archive',
+    title: 'Small Press Archive',
+    href: '#archive',
+    x: 74, y: 45, w: 24, h: 22,
+    copy: 'Past gatherings, programme notes, catalogues and traces from previous events.',
+  },
+  {
+    id: 'visit',
+    number: '04',
+    label: 'Visit',
+    title: 'Visit the Reading Room',
+    href: '#visit',
+    x: 14, y: 64, w: 22, h: 22,
+    copy: 'Opening hours, address, map and practical notes for visiting the room.',
+  },
+];
