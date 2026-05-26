@@ -1,0 +1,18 @@
+{
+  "name": "elsewhere-books-site-v2",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch-events": "node scripts/fetch-events.js",
+    "dev": "node scripts/fetch-events.js && vite --host 0.0.0.0",
+    "build": "node scripts/fetch-events.js && vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  }
+}
