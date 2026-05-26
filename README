@@ -1,0 +1,16 @@
+# Elsewhere Books Website
+
+React + Vite website for Elsewhere Books.
+
+## Development
+
+npm install
+npm run dev
+
+## Build
+
+npm run build
+
+## Deploy
+
+Deployed through Vercel from the main branch.
