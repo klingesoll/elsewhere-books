@@ -6,6 +6,7 @@ import { Room } from './components/Room';
 import { Manifesto } from './components/Manifesto';
 import { Programme } from './components/Programme';
 import { Shelves } from './components/Shelves';
+import { ScreeningNotes } from './components/ScreeningNotes';
 import { Archive } from './components/Archive';
 import { Support } from './components/Support';
 import { Visit } from './components/Visit';
@@ -23,6 +24,7 @@ export function App() {
       <Manifesto />
       <Programme events={upcoming} loading={loading} />
       <Shelves />
+      <ScreeningNotes />
       <Archive entries={past} loading={loading} />
       <Support />
       <Visit />

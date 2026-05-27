@@ -6,10 +6,10 @@ export function Room() {
     <section id="room" className="section">
       <div className="container frame room__grid">
         <div className="panel panel--text">
-          <p className="eyebrow">Interactive visual gateway</p>
-          <h2 className="section-title">Printed matter table.</h2>
-          <p>读书在别处，灵魂在此地。</p>
-          <p className="side-note">Hover objects to reveal annotations. Click a zone to open its card, then enter the corresponding section.</p>
+          <p className="eyebrow">Printed matter table</p>
+          <h2 className="section-title">Printed Matter Table.</h2>
+          <p>这张桌子是书店的临时目录：书单、活动、映后谈笔记与过往档案，都从这里展开。</p>
+          <p className="side-note">点击桌上的书、纸张与笔记，探索书单、活动、映后谈与过往档案。</p>
         </div>
         <InteractiveTable />
       </div>
@@ -43,7 +43,7 @@ function InteractiveTable() {
           src="/images/printed-matter-table.png"
           alt="Hand-drawn printed matter table with zines, books, notes, cups and people browsing"
         />
-        <span className="table-label">Table B / Interactive Printed Matter</span>
+        <span className="table-label">Table B / Interactive Catalog</span>
         <span
           className="cursor-label"
           style={{
@@ -65,9 +65,11 @@ function InteractiveTable() {
               width: `${zone.w}%`,
               height: `${zone.h}%`,
             }}
-            aria-label={`Open ${zone.title}`}
+            aria-label={`Open ${zone.title} card`}
             onPointerEnter={() => setActiveId(zone.id)}
             onFocus={() => setActiveId(zone.id)}
+            onPointerLeave={() => setActiveId(null)}
+            onBlur={() => setActiveId(null)}
             onClick={() => setSelectedId(zone.id)}
           >
             <span>{zone.number} {zone.label}</span>
@@ -83,18 +85,18 @@ function InteractiveTable() {
           >
             <div className="modal-card">
               <div className="modal-card__bar">
-                <span>{selected.number} / {selected.label}</span>
+                <span>TABLE B-{selected.number} / {selected.label}</span>
                 <button type="button" onClick={() => setSelectedId(null)}>Close</button>
               </div>
               <div className="modal-card__body">
                 <h3 id="table-card-title">{selected.title}</h3>
-                <p>{selected.copy}</p>
+                <p>{selected.description}</p>
                 <a
                   className="button button--dark"
                   href={selected.href}
                   onClick={() => setSelectedId(null)}
                 >
-                  Enter section
+                  {selected.action}
                 </a>
               </div>
             </div>
@@ -104,7 +106,13 @@ function InteractiveTable() {
 
       <div className="mobile-zones" aria-label="Visual gateway links">
         {IMAGE_ZONES.map((zone) => (
-          <a key={zone.id} href={zone.href}>{zone.number} {zone.label}</a>
+          <button
+            key={zone.id}
+            type="button"
+            onClick={() => setSelectedId(zone.id)}
+          >
+            {zone.number} {zone.label}
+          </button>
         ))}
       </div>
     </div>
