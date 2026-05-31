@@ -9,7 +9,7 @@ export function Shelves() {
   return (
     <section id="shelves" className="section">
       <div className="container frame">
-        <SectionHeader eyebrow="Printed matter table" title="Shelves / zines / reading paths" code="Table B">
+        <SectionHeader eyebrow="Thematic shelves" title="Shelves / zines / reading paths" code="Table B">
           一组围绕主题整理的阅读路径，展开后可查看对应书目与介绍。
         </SectionHeader>
 

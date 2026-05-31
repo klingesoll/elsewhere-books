@@ -14,7 +14,7 @@ export const IMAGE_ZONES = [
     number: '02',
     label: 'Programme',
     title: '近期活动',
-    description: '一份持续更新的 programme，收录放映、阅读、对话与小型文化聚会。',
+    description: '放映、读书会、讲座与小型文化聚会——查看近期活动与报名入口。',
     action: '查看活动',
     href: '#programme',
     x: 58, y: 55, w: 22, h: 20,

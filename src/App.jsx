@@ -20,12 +20,12 @@ export function App() {
       <Announcement />
       <Header />
       <Hero />
-      <Room />
       <Manifesto />
+      <Room />
       <Programme events={upcoming} loading={loading} />
       <Shelves />
-      <ScreeningNotes />
       <Archive entries={past} loading={loading} />
+      <ScreeningNotes />
       <Support />
       <Visit />
       <Footer />

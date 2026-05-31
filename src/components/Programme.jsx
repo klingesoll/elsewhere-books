@@ -22,7 +22,7 @@ export function Programme({ events, loading }) {
               新的放映、读书会、对话与小型文化聚会会在这里更新。你也可以先查看过往活动档案。
             </p>
             <div className="notice-actions">
-              <a href="#archive" className="button button-dark">查看过往活动</a>
+              <a href="#archive" className="button button--dark">查看过往活动</a>
               <a
                 href="https://luma.com/elsewherebooks"
                 className="button"

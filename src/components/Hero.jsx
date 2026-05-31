@@ -7,7 +7,7 @@ export function Hero() {
         <div className="hero__logo panel">
           <div className="hero__meta">
             <span className="stamp">artist-run room</span>
-            <span>Opening / 2025-09-21</span>
+            <span>Est. / 2025</span>
           </div>
           <img src="/images/elsewhere-logo-transparent-full.png" alt="别处书社 Elsewhere Books" className="logo" />
           <div className="hero__note split-text">
