@@ -5,15 +5,15 @@
       "title": "《双》《那些你不知道的事》《几面》放映&导演连线",
       "type": "FILM SCREENING",
       "description": "",
-      "date": "5 JUNE",
+      "date": "11 JUNE",
       "time": "18:30–21:00",
       "url": "https://lu.ma/gs8lt5ko",
-      "cover": "https://images.lumacdn.com/event-covers/nd/f798f407-26d3-4b58-adc3-97cb5910c05b.jpg",
+      "cover": "https://images.lumacdn.com/uploads/pm/acbce77f-8476-4191-a517-bc0aff4d7965.jpg",
       "location": "level 3/139 Franklin St, Melbourne VIC 3000, Australia",
       "isFree": true,
       "ticketPrice": null,
-      "startIso": "2026-06-05T08:30:00.000Z",
-      "endIso": "2026-06-05T11:00:00.000Z"
+      "startIso": "2026-06-11T08:30:00.000Z",
+      "endIso": "2026-06-11T11:00:00.000Z"
     }
   ],
   "past": [
@@ -543,5 +543,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-06-04T22:17:28.879Z"
+  "fetchedAt": "2026-06-05T22:12:02.876Z"
 }
