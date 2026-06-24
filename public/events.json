@@ -14,6 +14,21 @@
       "ticketPrice": null,
       "startIso": "2026-06-25T08:00:00.000Z",
       "endIso": "2026-06-25T09:30:00.000Z"
+    },
+    {
+      "id": "P-002",
+      "title": "Storm Under the Sun 红日风暴",
+      "type": "EVENT",
+      "description": "",
+      "date": "5 JULY",
+      "time": "14:00–15:50",
+      "url": "https://lu.ma/6s6q7lwz",
+      "cover": "https://images.lumacdn.com/uploads/ks/82f94854-b9ba-4e6c-9865-3131804c9e71.png",
+      "location": "ACMI Cinemas, ACMI, Federation Square Swanston St & Flinders St, Melbourne VIC 3000, Melbourne VIC 3000, Australia",
+      "isFree": true,
+      "ticketPrice": null,
+      "startIso": "2026-07-05T04:00:00.000Z",
+      "endIso": "2026-07-05T05:50:00.000Z"
     }
   ],
   "past": [
@@ -573,5 +588,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-06-23T22:08:46.783Z"
+  "fetchedAt": "2026-06-24T22:11:39.862Z"
 }
