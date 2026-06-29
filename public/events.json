@@ -2,6 +2,21 @@
   "upcoming": [
     {
       "id": "P-001",
+      "title": "女权社群后，离开的，留下的",
+      "type": "EVENT",
+      "description": "",
+      "date": "4 JULY",
+      "time": "19:00–21:00",
+      "url": "https://lu.ma/t2qfslq7",
+      "cover": "https://images.lumacdn.com/uploads/u7/3aa1c0ae-06f8-400e-bd6f-07403ec2935e.jpg",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-07-04T09:00:00.000Z",
+      "endIso": "2026-07-04T11:00:00.000Z"
+    },
+    {
+      "id": "P-002",
       "title": "Storm Under the Sun 红日风暴",
       "type": "EVENT",
       "description": "",
@@ -588,5 +603,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-06-28T21:58:09.754Z"
+  "fetchedAt": "2026-06-29T22:05:56.726Z"
 }
