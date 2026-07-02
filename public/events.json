@@ -29,6 +29,21 @@
       "ticketPrice": null,
       "startIso": "2026-07-05T04:00:00.000Z",
       "endIso": "2026-07-05T05:50:00.000Z"
+    },
+    {
+      "id": "P-003",
+      "title": "故土.江湖.流亡",
+      "type": "EVENT",
+      "description": "",
+      "date": "5 JULY",
+      "time": "18:00–20:00",
+      "url": "https://lu.ma/lzklfkwj",
+      "cover": "https://images.lumacdn.com/uploads/en/9b02da93-9972-4fc2-a6f1-a95d60c7338e.jpg",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-07-05T08:00:00.000Z",
+      "endIso": "2026-07-05T10:00:00.000Z"
     }
   ],
   "past": [
@@ -603,5 +618,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-07-01T22:14:37.198Z"
+  "fetchedAt": "2026-07-02T22:02:04.740Z"
 }
