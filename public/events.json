@@ -10,7 +10,7 @@
       "url": "https://lu.ma/6s6q7lwz",
       "cover": "https://images.lumacdn.com/uploads/ks/82f94854-b9ba-4e6c-9865-3131804c9e71.png",
       "location": "ACMI Cinemas, ACMI, Federation Square Swanston St & Flinders St, Melbourne VIC 3000, Melbourne VIC 3000, Australia",
-      "isFree": true,
+      "isFree": false,
       "ticketPrice": null,
       "startIso": "2026-07-05T04:00:00.000Z",
       "endIso": "2026-07-05T05:50:00.000Z"
@@ -603,5 +603,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-07-03T22:00:32.585Z"
+  "fetchedAt": "2026-07-04T21:53:07.806Z"
 }
