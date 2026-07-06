@@ -1,5 +1,36 @@
 {
-  "upcoming": [],
+  "upcoming": [
+    {
+      "id": "P-001",
+      "title": "《十年》/《Ten Years》@Ritz Cinema in Sydney",
+      "type": "EVENT",
+      "description": "",
+      "date": "19 JULY",
+      "time": "14:00–16:10",
+      "url": "https://lu.ma/k786kul8",
+      "cover": "https://images.lumacdn.com/uploads/g9/9feb1812-4035-41b9-85e8-b8ea28b500f2.jpg",
+      "location": "Ritz Cinemas, 45 St Pauls St, Randwick NSW 2031, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-07-19T04:00:00.000Z",
+      "endIso": "2026-07-19T06:10:00.000Z"
+    },
+    {
+      "id": "P-002",
+      "title": "《十年》/《Ten Years》@LIDO Cinema in Melbourne",
+      "type": "EVENT",
+      "description": "",
+      "date": "19 JULY",
+      "time": "14:00–16:10",
+      "url": "https://lu.ma/cwjgq6fi",
+      "cover": "https://images.lumacdn.com/uploads/g9/9feb1812-4035-41b9-85e8-b8ea28b500f2.jpg",
+      "location": "Lido Cinemas, 675 Glenferrie Rd, Hawthorn VIC 3122, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-07-19T04:00:00.000Z",
+      "endIso": "2026-07-19T06:10:00.000Z"
+    }
+  ],
   "past": [
     {
       "id": "A-001",
@@ -602,5 +633,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-07-05T21:56:04.827Z"
+  "fetchedAt": "2026-07-06T22:09:28.644Z"
 }
