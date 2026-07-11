@@ -29,6 +29,21 @@
       "ticketPrice": null,
       "startIso": "2026-07-19T04:00:00.000Z",
       "endIso": "2026-07-19T06:10:00.000Z"
+    },
+    {
+      "id": "P-003",
+      "title": "Purple Flag Publications’ Book Sharing",
+      "type": "EVENT",
+      "description": "",
+      "date": "21 JULY",
+      "time": "18:00–19:30",
+      "url": "https://lu.ma/jqn0gwhh",
+      "cover": "https://images.lumacdn.com/uploads/po/2708e889-2b19-4511-b83e-01fa66a01293.png",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-07-21T08:00:00.000Z",
+      "endIso": "2026-07-21T09:30:00.000Z"
     }
   ],
   "past": [
@@ -633,5 +648,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-07-10T21:55:45.254Z"
+  "fetchedAt": "2026-07-11T21:42:42.587Z"
 }
