@@ -2,6 +2,21 @@
   "upcoming": [
     {
       "id": "P-001",
+      "title": "華語酷兒電影全球聯展｜紀實短片單元",
+      "type": "SMALL PRESS",
+      "description": "",
+      "date": "16 JULY",
+      "time": "19:00–20:30",
+      "url": "https://lu.ma/zsqxlzfs",
+      "cover": "https://images.lumacdn.com/uploads/1w/e6a6b405-3442-414a-9c4f-59a4769a8dbd.jpg",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-07-16T09:00:00.000Z",
+      "endIso": "2026-07-16T10:30:00.000Z"
+    },
+    {
+      "id": "P-002",
       "title": "《十年》/《Ten Years》@Ritz Cinema in Sydney",
       "type": "EVENT",
       "description": "",
@@ -16,7 +31,7 @@
       "endIso": "2026-07-19T06:10:00.000Z"
     },
     {
-      "id": "P-002",
+      "id": "P-003",
       "title": "《十年》/《Ten Years》@LIDO Cinema in Melbourne",
       "type": "EVENT",
       "description": "",
@@ -31,7 +46,7 @@
       "endIso": "2026-07-19T06:10:00.000Z"
     },
     {
-      "id": "P-003",
+      "id": "P-004",
       "title": "Purple Flag Publications’ Book Sharing",
       "type": "EVENT",
       "description": "",
@@ -44,6 +59,21 @@
       "ticketPrice": null,
       "startIso": "2026-07-21T08:00:00.000Z",
       "endIso": "2026-07-21T09:30:00.000Z"
+    },
+    {
+      "id": "P-005",
+      "title": "感动之外：我们在《给阿嬷的情书》中还能读到什么？",
+      "type": "EVENT",
+      "description": "",
+      "date": "28 JULY",
+      "time": "18:00–19:30",
+      "url": "https://lu.ma/skfohstn",
+      "cover": "https://images.lumacdn.com/uploads/i7/378a53cf-d3d5-46c2-a896-79cff9d1dedb.jpg",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": true,
+      "ticketPrice": null,
+      "startIso": "2026-07-28T08:00:00.000Z",
+      "endIso": "2026-07-28T09:30:00.000Z"
     }
   ],
   "past": [
@@ -648,5 +678,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-07-12T21:42:12.400Z"
+  "fetchedAt": "2026-07-13T21:50:43.290Z"
 }
