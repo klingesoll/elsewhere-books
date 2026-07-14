@@ -10,7 +10,7 @@
       "url": "https://lu.ma/zsqxlzfs",
       "cover": "https://images.lumacdn.com/uploads/1w/e6a6b405-3442-414a-9c4f-59a4769a8dbd.jpg",
       "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": false,
+      "isFree": true,
       "ticketPrice": null,
       "startIso": "2026-07-16T09:00:00.000Z",
       "endIso": "2026-07-16T10:30:00.000Z"
@@ -55,7 +55,7 @@
       "url": "https://lu.ma/jqn0gwhh",
       "cover": "https://images.lumacdn.com/uploads/po/2708e889-2b19-4511-b83e-01fa66a01293.png",
       "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": false,
+      "isFree": true,
       "ticketPrice": null,
       "startIso": "2026-07-21T08:00:00.000Z",
       "endIso": "2026-07-21T09:30:00.000Z"
@@ -678,5 +678,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-07-13T21:50:43.290Z"
+  "fetchedAt": "2026-07-14T21:52:44.961Z"
 }
