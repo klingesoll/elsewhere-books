@@ -1,16 +1,166 @@
 # Elsewhere Books Website
 
-React + Vite website for Elsewhere Books.
+Production website for Elsewhere Books, built with React and Vite.
 
-## Development
+This repository focuses on three engineering goals:
+- Fast local iteration (Vite + component-based structure)
+- Reliable event data sync (Luma fetch pipeline + cached fallback)
+- Low-friction deployment (Vercel + scheduled GitHub Action sync)
+
+## 1. Tech Stack
+
+- Runtime: Node.js 20+
+- Frontend: React (functional components + hooks)
+- Build tool: Vite
+- Data source: Luma Calendar API
+- Hosting: Vercel (main branch)
+- Automation: GitHub Actions (scheduled events sync)
+
+## 2. Project Structure
+
+.
+|- public/
+|  |- events.json                 # generated event cache used by frontend
+|  |- images/
+|- scripts/
+|  |- fetch-events.js             # fetch + normalize Luma events
+|- src/
+|  |- components/                 # page sections and UI primitives
+|  |- content/                    # static content records
+|  |- hooks/useLumaEvents.js      # fetches /events.json at runtime
+|  |- App.jsx                     # main page composition
+|  |- main.jsx                    # app entry
+|  |- styles.css
+|- .github/workflows/fetch-events.yml
+|- package.json
+|- README
+
+## 3. Local Development
+
+Prerequisites:
+- Node.js 20 or newer
+- npm 10 or newer
+
+Install dependencies:
 
 npm install
+
+Start development server:
+
 npm run dev
 
-## Build
+App URLs (default):
+- Local: http://localhost:5173
+- LAN: printed by Vite in terminal
 
-npm run build
+## 4. Available Scripts
 
-## Deploy
+- npm run fetch-events
+	- Pulls future and past events from Luma
+	- Writes normalized output to public/events.json
+- npm run dev
+	- Refreshes events first, then starts Vite dev server
+- npm run build
+	- Refreshes events first, then builds production bundle
+- npm run preview
+	- Serves the production build locally
 
-Deployed through Vercel from the main branch.
+## 5. Event Data Pipeline
+
+Event flow:
+1. scripts/fetch-events.js calls the Luma calendar API
+2. Raw entries are normalized (id/type/time/description/url)
+3. Output is written to public/events.json
+4. Frontend hook useLumaEvents fetches /events.json
+
+Failure behavior:
+- If remote fetch fails and public/events.json exists, cached data is kept
+- If remote fetch fails and no cache exists, an empty payload is generated
+
+This keeps production behavior stable even when external API calls fail.
+
+## 6. Environment and Configuration
+
+Current setup does not require API secrets.
+
+- Calendar ID and timezone are configured in scripts/fetch-events.js
+- .env exists for future extension, but no required variables are currently enforced
+
+If secrets are introduced later, they should be stored in:
+- Local: .env.local (gitignored)
+- CI/Hosting: GitHub Actions secrets / Vercel project env vars
+
+## 7. CI and Scheduled Sync
+
+GitHub workflow: .github/workflows/fetch-events.yml
+
+Behavior:
+- Runs on schedule (daily UTC cron)
+- Also supports manual run via workflow_dispatch
+- Commits updated public/events.json when data changes
+
+Operational note:
+- This workflow requires write permission to repository contents
+
+## 8. Deployment
+
+- Platform: Vercel
+- Source branch: main
+- Build command: npm run build
+- Output directory: dist
+
+Recommended Vercel settings:
+- Node.js version aligned with local/CI (20+)
+- Automatic deploys enabled on main
+
+## 9. Engineering Conventions
+
+Branching:
+- main is always deployable
+- Feature work should use short-lived branches
+
+Commits:
+- Prefer Conventional Commits style:
+	- feat: new feature
+	- fix: bug fix
+	- chore: maintenance or tooling
+	- docs: documentation only
+
+Pull requests:
+- Keep PR scope focused
+- Include impact summary and test evidence
+- Require green build before merge
+
+Code style:
+- Keep components small and composable
+- Prefer explicit, readable naming over clever abstractions
+- Avoid coupling UI components directly to remote API responses
+
+## 10. Release Checklist
+
+Before merging to main:
+1. npm install completed successfully
+2. npm run dev works locally
+3. npm run build succeeds
+4. Key page sections render correctly
+5. Event data loads from public/events.json
+6. No unintended file changes in commit
+
+## 11. Troubleshooting
+
+Issue: vite is not recognized
+- Cause: dependencies not installed
+- Fix: run npm install, then npm run dev
+
+Issue: git push returns 403
+- Cause: current GitHub account has no write access
+- Fix: ask repo owner to add your account as collaborator or push to your fork
+
+Issue: event list is empty
+- Check public/events.json exists
+- Run npm run fetch-events manually and inspect terminal output
+- If remote API is unavailable, verify cached data fallback
+
+## 12. Contact and Ownership
+
+Primary ownership and roadmap should be tracked in repository Issues and PRs to keep decisions auditable.
