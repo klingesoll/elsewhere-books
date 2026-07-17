@@ -1,73 +1,133 @@
 # Elsewhere Books Website
 
-Elsewhere Books 的官网项目，基于 React + Vite。
+Official website for Elsewhere Books, built with React and Vite.
 
 ## Quick Start
+
+Requirements:
+- Node.js 20+
+- npm 10+
+
+Install and run:
 
 ```bash
 npm install
 npm run dev
 ```
 
-默认地址：
+Default local URL:
 - http://localhost:5173
 
 ## Scripts
 
-- `npm run dev`：先拉取活动数据，再启动开发服务器
-- `npm run build`：先拉取活动数据，再构建生产包
-- `npm run preview`：本地预览生产包
-- `npm run fetch-events`：手动同步 Luma 活动到 `public/events.json`
+```bash
+npm run fetch-events
+npm run dev
+npm run build
+npm run preview
+```
 
-## Minimal Structure
+What each script does:
+- `npm run fetch-events`: Fetches and normalizes Luma events into `public/events.json`.
+- `npm run dev`: Refreshes events, then starts the Vite dev server.
+- `npm run build`: Refreshes events, then builds the production bundle.
+- `npm run preview`: Serves the production bundle locally.
 
-- `src/components/`：页面区块组件
-- `src/hooks/useLumaEvents.js`：前端读取 `events.json`
-- `scripts/fetch-events.js`：从 Luma 拉取并标准化活动数据
-- `public/events.json`：活动缓存文件
-- `.github/workflows/fetch-events.yml`：定时同步活动数据
+## Project Structure
 
-## How Data Works
+```text
+public/
+  events.json
+  images/
+scripts/
+  fetch-events.js
+src/
+  components/
+  content/
+  hooks/
+  App.jsx
+  main.jsx
+  styles.css
+.github/workflows/
+  fetch-events.yml
+index.html
+package.json
+README
+```
 
-数据流程：
-1. `fetch-events.js` 请求 Luma API
-2. 生成标准化活动数据
-3. 写入 `public/events.json`
-4. 页面通过 `useLumaEvents` 读取并渲染
+## Event Data Flow
 
-失败兜底：
-- 拉取失败且本地有 `events.json`：继续用缓存
-- 拉取失败且无缓存：生成空数据，避免构建中断
+1. `scripts/fetch-events.js` requests events from Luma.
+2. Data is normalized into a frontend-friendly shape.
+3. Output is written to `public/events.json`.
+4. The app reads `/events.json` via `useLumaEvents`.
 
-## Deploy
+Failure fallback:
+- If fetch fails and `public/events.json` exists, cached data is kept.
+- If fetch fails and no cache exists, an empty payload is generated.
 
-- 部署平台：Vercel
-- 分支：`main`
-- 构建命令：`npm run build`
-- 输出目录：`dist`
+## Deployment
 
-## Engineering Rules
+- Platform: Vercel
+- Branch: `main`
+- Build command: `npm run build`
+- Output directory: `dist`
 
-- `main` 分支保持可部署
-- 提交信息建议使用 Conventional Commits（`feat` / `fix` / `chore` / `docs`）
-- PR 保持小而明确，描述变更影响和验证方式
+## CI Automation
+
+Workflow file:
+- `.github/workflows/fetch-events.yml`
+
+Behavior:
+- Runs on a daily schedule.
+- Can be triggered manually.
+- Commits `public/events.json` when content changes.
+
+## Collaboration Rules
+
+- Keep `main` deployable.
+- Use short-lived feature branches.
+- Prefer conventional commit prefixes: `feat`, `fix`, `chore`, `docs`.
+- Keep pull requests focused and include local verification notes.
 
 ## Pre-Merge Checklist
 
 ```bash
 npm run dev
 npm run build
+git status
 ```
 
-确认：
-- 页面可正常打开
-- 活动数据正常显示
-- 没有误提交文件
+Verify:
+- App loads correctly.
+- Build succeeds.
+- No unrelated files are included in the commit.
 
 ## Troubleshooting
 
-`vite is not recognized`
-- 先执行：`npm install`
+### `vite is not recognized`
 
-`git push` 返回 403
-- 当前 GitHub 账号没有仓库写权限，需要仓库所有者添加 collaborator
+Install dependencies first:
+
+```bash
+npm install
+npm run dev
+```
+
+### `git push` returns 403
+
+Your GitHub account does not have write access to the target repository.
+
+Options:
+- Ask the repository owner to add you as a collaborator.
+- Push to your fork and open a pull request.
+
+### Events list is empty
+
+Run:
+
+```bash
+npm run fetch-events
+```
+
+Then check whether `public/events.json` contains data.
