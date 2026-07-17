@@ -8,8 +8,8 @@ export function Room() {
         <div className="panel panel--text">
           <p className="eyebrow">Printed matter table</p>
           <h2 className="section-title">Printed Matter Table.</h2>
-          <p>这张桌子是书店的临时目录：书单、活动、映后谈笔记与过往档案，都从这里展开。</p>
-          <p className="side-note">点击桌上的书、纸张与笔记，探索书单、活动、映后谈与过往档案。</p>
+          <p>点击桌面与我们互动吧！</p>
+          <p className="side-note">点击桌上的书、纸张与笔记，探索书单、活动、映后谈与过往档案等。</p>
         </div>
         <InteractiveTable />
       </div>

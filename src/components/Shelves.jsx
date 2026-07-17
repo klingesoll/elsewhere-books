@@ -10,7 +10,7 @@ export function Shelves() {
     <section id="shelves" className="section">
       <div className="container frame">
         <SectionHeader eyebrow="Thematic shelves" title="Shelves / zines / reading paths" code="Table B">
-          一组围绕主题整理的阅读路径，展开后可查看对应书目与介绍。
+          点击书单，展开后可查看对应书目与介绍。
         </SectionHeader>
 
         <div className="shelf-grid">

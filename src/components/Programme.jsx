@@ -5,7 +5,7 @@ export function Programme({ events, loading }) {
     <section id="programme" className="section">
       <div className="container frame">
         <SectionHeader eyebrow="Printed programme" title="Programme wall" code="Issue 005">
-          一份持续更新的 programme，收录放映、阅读、对话与小型文化聚会。
+          书店近期文化活动，详情请参Luma页面
         </SectionHeader>
 
         {loading ? (
@@ -19,7 +19,7 @@ export function Programme({ events, loading }) {
             <p className="notice-kicker">Programme notice</p>
             <h3>近期活动正在整理中</h3>
             <p>
-              新的放映、读书会、对话与小型文化聚会会在这里更新。你也可以先查看过往活动档案。
+              放映、读书会、对话与小型文化聚会等活动正在整理中，敬请期待。你也可以在 Luma 查看过往活动。
             </p>
             <div className="notice-actions">
               <a href="#archive" className="button button--dark">查看过往活动</a>

@@ -5,7 +5,7 @@ export function Archive({ entries, loading }) {
     <section id="archive" className="section">
       <div className="container frame">
         <SectionHeader eyebrow="Archive index" title="Past gatherings" code="Box A">
-          过去活动不做成博客列表，而像小型文化档案：编号、类型、题名、缺页、注释、可追溯的现场痕迹。
+          过往活动档案|PAST LIVES
         </SectionHeader>
         {loading ? (
           <p className="eyebrow" style={{ padding: '24px clamp(20px, 4vw, 56px)' }}>Loading archive…</p>

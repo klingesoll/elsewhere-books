@@ -11,7 +11,7 @@ export function Hero() {
           </div>
           <img src="/images/elsewhere-logo-transparent-full.png" alt="别处书社 Elsewhere Books" className="logo" />
           <div className="hero__note split-text">
-            <p>一本临时书展手册，一面活动海报墙，一间华文阅读室。</p>
+            <p>不是墨尔本唯一一家华人书店</p>
             <p>A small press table, a cultural archive, a room for gathering around books and ideas.</p>
           </div>
         </div>
@@ -19,7 +19,7 @@ export function Hero() {
           <p className="eyebrow">Independent art book fair / Reading room / Small press archive</p>
           <h1>在别处<br />阅读。</h1>
           <h2>Reading<br />from elsewhere.</h2>
-          <p className="lead">A Chinese-language bookshop and artist-run cultural space in Melbourne. Books, screenings, zines, conversations and gatherings for readers living between places.</p>
+          <p className="lead">A Sinophone bookshop and artist-run cultural space in Melbourne. Books, screenings, zines, conversations and gatherings for readers living between places.</p>
           <div className="actions">
             <ButtonLink href="https://luma.com/elsewherebooks" dark>查看活动PROGRAMME</ButtonLink>
             <ButtonLink href="#visit">到店信息VISIT</ButtonLink>

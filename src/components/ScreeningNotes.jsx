@@ -17,7 +17,7 @@ export function ScreeningNotes() {
     <section id="screening-notes" className="section">
       <div className="container frame">
         <SectionHeader eyebrow="Screening notes" title="After the screening" code="Notes">
-          映后谈笔记整理放映之后留下的问题、声音与现场讨论。
+          映后谈笔记整理
         </SectionHeader>
         <div className="notes-grid">
           {QNA_RECORDS.map((record) => (
