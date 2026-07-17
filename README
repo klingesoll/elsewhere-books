@@ -1,166 +1,73 @@
 # Elsewhere Books Website
 
-Production website for Elsewhere Books, built with React and Vite.
+Elsewhere Books 的官网项目，基于 React + Vite。
 
-This repository focuses on three engineering goals:
-- Fast local iteration (Vite + component-based structure)
-- Reliable event data sync (Luma fetch pipeline + cached fallback)
-- Low-friction deployment (Vercel + scheduled GitHub Action sync)
+## Quick Start
 
-## 1. Tech Stack
-
-- Runtime: Node.js 20+
-- Frontend: React (functional components + hooks)
-- Build tool: Vite
-- Data source: Luma Calendar API
-- Hosting: Vercel (main branch)
-- Automation: GitHub Actions (scheduled events sync)
-
-## 2. Project Structure
-
-.
-|- public/
-|  |- events.json                 # generated event cache used by frontend
-|  |- images/
-|- scripts/
-|  |- fetch-events.js             # fetch + normalize Luma events
-|- src/
-|  |- components/                 # page sections and UI primitives
-|  |- content/                    # static content records
-|  |- hooks/useLumaEvents.js      # fetches /events.json at runtime
-|  |- App.jsx                     # main page composition
-|  |- main.jsx                    # app entry
-|  |- styles.css
-|- .github/workflows/fetch-events.yml
-|- package.json
-|- README
-
-## 3. Local Development
-
-Prerequisites:
-- Node.js 20 or newer
-- npm 10 or newer
-
-Install dependencies:
-
+```bash
 npm install
-
-Start development server:
-
 npm run dev
+```
 
-App URLs (default):
-- Local: http://localhost:5173
-- LAN: printed by Vite in terminal
+默认地址：
+- http://localhost:5173
 
-## 4. Available Scripts
+## Scripts
 
-- npm run fetch-events
-	- Pulls future and past events from Luma
-	- Writes normalized output to public/events.json
-- npm run dev
-	- Refreshes events first, then starts Vite dev server
-- npm run build
-	- Refreshes events first, then builds production bundle
-- npm run preview
-	- Serves the production build locally
+- `npm run dev`：先拉取活动数据，再启动开发服务器
+- `npm run build`：先拉取活动数据，再构建生产包
+- `npm run preview`：本地预览生产包
+- `npm run fetch-events`：手动同步 Luma 活动到 `public/events.json`
 
-## 5. Event Data Pipeline
+## Minimal Structure
 
-Event flow:
-1. scripts/fetch-events.js calls the Luma calendar API
-2. Raw entries are normalized (id/type/time/description/url)
-3. Output is written to public/events.json
-4. Frontend hook useLumaEvents fetches /events.json
+- `src/components/`：页面区块组件
+- `src/hooks/useLumaEvents.js`：前端读取 `events.json`
+- `scripts/fetch-events.js`：从 Luma 拉取并标准化活动数据
+- `public/events.json`：活动缓存文件
+- `.github/workflows/fetch-events.yml`：定时同步活动数据
 
-Failure behavior:
-- If remote fetch fails and public/events.json exists, cached data is kept
-- If remote fetch fails and no cache exists, an empty payload is generated
+## How Data Works
 
-This keeps production behavior stable even when external API calls fail.
+数据流程：
+1. `fetch-events.js` 请求 Luma API
+2. 生成标准化活动数据
+3. 写入 `public/events.json`
+4. 页面通过 `useLumaEvents` 读取并渲染
 
-## 6. Environment and Configuration
+失败兜底：
+- 拉取失败且本地有 `events.json`：继续用缓存
+- 拉取失败且无缓存：生成空数据，避免构建中断
 
-Current setup does not require API secrets.
+## Deploy
 
-- Calendar ID and timezone are configured in scripts/fetch-events.js
-- .env exists for future extension, but no required variables are currently enforced
+- 部署平台：Vercel
+- 分支：`main`
+- 构建命令：`npm run build`
+- 输出目录：`dist`
 
-If secrets are introduced later, they should be stored in:
-- Local: .env.local (gitignored)
-- CI/Hosting: GitHub Actions secrets / Vercel project env vars
+## Engineering Rules
 
-## 7. CI and Scheduled Sync
+- `main` 分支保持可部署
+- 提交信息建议使用 Conventional Commits（`feat` / `fix` / `chore` / `docs`）
+- PR 保持小而明确，描述变更影响和验证方式
 
-GitHub workflow: .github/workflows/fetch-events.yml
+## Pre-Merge Checklist
 
-Behavior:
-- Runs on schedule (daily UTC cron)
-- Also supports manual run via workflow_dispatch
-- Commits updated public/events.json when data changes
+```bash
+npm run dev
+npm run build
+```
 
-Operational note:
-- This workflow requires write permission to repository contents
+确认：
+- 页面可正常打开
+- 活动数据正常显示
+- 没有误提交文件
 
-## 8. Deployment
+## Troubleshooting
 
-- Platform: Vercel
-- Source branch: main
-- Build command: npm run build
-- Output directory: dist
+`vite is not recognized`
+- 先执行：`npm install`
 
-Recommended Vercel settings:
-- Node.js version aligned with local/CI (20+)
-- Automatic deploys enabled on main
-
-## 9. Engineering Conventions
-
-Branching:
-- main is always deployable
-- Feature work should use short-lived branches
-
-Commits:
-- Prefer Conventional Commits style:
-	- feat: new feature
-	- fix: bug fix
-	- chore: maintenance or tooling
-	- docs: documentation only
-
-Pull requests:
-- Keep PR scope focused
-- Include impact summary and test evidence
-- Require green build before merge
-
-Code style:
-- Keep components small and composable
-- Prefer explicit, readable naming over clever abstractions
-- Avoid coupling UI components directly to remote API responses
-
-## 10. Release Checklist
-
-Before merging to main:
-1. npm install completed successfully
-2. npm run dev works locally
-3. npm run build succeeds
-4. Key page sections render correctly
-5. Event data loads from public/events.json
-6. No unintended file changes in commit
-
-## 11. Troubleshooting
-
-Issue: vite is not recognized
-- Cause: dependencies not installed
-- Fix: run npm install, then npm run dev
-
-Issue: git push returns 403
-- Cause: current GitHub account has no write access
-- Fix: ask repo owner to add your account as collaborator or push to your fork
-
-Issue: event list is empty
-- Check public/events.json exists
-- Run npm run fetch-events manually and inspect terminal output
-- If remote API is unavailable, verify cached data fallback
-
-## 12. Contact and Ownership
-
-Primary ownership and roadmap should be tracked in repository Issues and PRs to keep decisions auditable.
+`git push` 返回 403
+- 当前 GitHub 账号没有仓库写权限，需要仓库所有者添加 collaborator
