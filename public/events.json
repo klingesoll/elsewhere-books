@@ -2,18 +2,33 @@
   "upcoming": [
     {
       "id": "P-001",
-      "title": "感动之外：我们在《给阿嬷的情书》中还能读到什么？",
+      "title": "別處兩說 01｜南枝應不應該向淑柔隱瞞木生的死訊？",
       "type": "EVENT",
       "description": "",
       "date": "28 JULY",
       "time": "18:00–19:30",
       "url": "https://lu.ma/skfohstn",
-      "cover": "https://images.lumacdn.com/uploads/i7/378a53cf-d3d5-46c2-a896-79cff9d1dedb.jpg",
+      "cover": "https://images.lumacdn.com/uploads/xj/7138c2ed-947a-4261-81e2-8cfba5b7922d.webp",
       "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
       "isFree": true,
       "ticketPrice": null,
       "startIso": "2026-07-28T08:00:00.000Z",
       "endIso": "2026-07-28T09:30:00.000Z"
+    },
+    {
+      "id": "P-002",
+      "title": "別處作者 03｜想在離亂的時代做個好人",
+      "type": "EVENT",
+      "description": "",
+      "date": "4 AUG",
+      "time": "18:00–19:30",
+      "url": "https://lu.ma/rvr64m0m",
+      "cover": "https://images.lumacdn.com/uploads/lx/acf1c13d-d2ef-46e7-92d8-6ff4e880e6a0.png",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": true,
+      "ticketPrice": null,
+      "startIso": "2026-08-04T08:00:00.000Z",
+      "endIso": "2026-08-04T09:30:00.000Z"
     }
   ],
   "past": [
@@ -678,5 +693,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-07-22T22:00:11.925Z"
+  "fetchedAt": "2026-07-23T22:00:19.453Z"
 }
