@@ -17,6 +17,21 @@
     },
     {
       "id": "P-002",
+      "title": "Dragon Inn 龙门客栈 （限时优惠）",
+      "type": "EVENT",
+      "description": "",
+      "date": "2 AUG",
+      "time": "14:00–16:00",
+      "url": "https://lu.ma/l9xzn1g0",
+      "cover": "https://images.lumacdn.com/uploads/lz/13a53a03-4899-4f5e-be98-748ae6375bf5.webp",
+      "location": "ACMI Cinemas, ACMI, Federation Square Swanston St & Flinders St, Melbourne VIC 3000, Melbourne VIC 3000, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-08-02T04:00:00.000Z",
+      "endIso": "2026-08-02T06:00:00.000Z"
+    },
+    {
+      "id": "P-003",
       "title": "別處作者 03｜想在離亂的時代做個好人",
       "type": "EVENT",
       "description": "",
@@ -693,5 +708,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-07-24T21:59:29.272Z"
+  "fetchedAt": "2026-07-25T21:48:19.481Z"
 }
