@@ -17,6 +17,21 @@
     },
     {
       "id": "P-002",
+      "title": "華語酷兒電影·劇情短片",
+      "type": "EVENT",
+      "description": "",
+      "date": "30 JULY",
+      "time": "18:30–20:15",
+      "url": "https://lu.ma/n1op0izf",
+      "cover": "https://images.lumacdn.com/uploads/g4/2551ad63-465d-4f1d-8360-29521f314015.jpg",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-07-30T08:30:00.000Z",
+      "endIso": "2026-07-30T10:15:00.000Z"
+    },
+    {
+      "id": "P-003",
       "title": "Dragon Inn 龙门客栈 （限时优惠）",
       "type": "EVENT",
       "description": "",
@@ -31,7 +46,7 @@
       "endIso": "2026-08-02T06:00:00.000Z"
     },
     {
-      "id": "P-003",
+      "id": "P-004",
       "title": "別處作者 03｜想在離亂的時代做個好人",
       "type": "EVENT",
       "description": "",
@@ -708,5 +723,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-07-26T21:53:30.401Z"
+  "fetchedAt": "2026-07-27T22:00:14.593Z"
 }
