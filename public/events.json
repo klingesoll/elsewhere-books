@@ -2,21 +2,6 @@
   "upcoming": [
     {
       "id": "P-001",
-      "title": "別處作者 03｜想在離亂的時代做個好人",
-      "type": "EVENT",
-      "description": "",
-      "date": "4 AUG",
-      "time": "18:00–19:30",
-      "url": "https://lu.ma/rvr64m0m",
-      "cover": "https://images.lumacdn.com/uploads/lx/acf1c13d-d2ef-46e7-92d8-6ff4e880e6a0.png",
-      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": true,
-      "ticketPrice": null,
-      "startIso": "2026-08-04T08:00:00.000Z",
-      "endIso": "2026-08-04T09:30:00.000Z"
-    },
-    {
-      "id": "P-002",
       "title": "《秽语癖》新书发布与自出版对谈",
       "type": "BOOK LAUNCH",
       "description": "",
@@ -31,7 +16,67 @@
       "endIso": "2026-08-08T06:00:00.000Z"
     },
     {
+      "id": "P-002",
+      "title": "女权社群后，离开的，留下的…",
+      "type": "EVENT",
+      "description": "",
+      "date": "9 AUG",
+      "time": "19:00–21:00",
+      "url": "https://lu.ma/3nu63vjy",
+      "cover": "https://images.lumacdn.com/uploads/8q/d7abaf47-b856-4313-a8fc-b40ce0833a0c.jpg",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-08-09T09:00:00.000Z",
+      "endIso": "2026-08-09T11:00:00.000Z"
+    },
+    {
       "id": "P-003",
+      "title": "别处放映24｜MIFF入围导演影片特别放映：《我的AI恋人》和导演丑娃现场交流",
+      "type": "FILM SCREENING",
+      "description": "",
+      "date": "14 AUG",
+      "time": "18:00–19:30",
+      "url": "https://lu.ma/gy2b9f5c",
+      "cover": "https://images.lumacdn.com/uploads/fn/72364bd1-f618-41ed-8403-3af7fcef53b4.png",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": true,
+      "ticketPrice": null,
+      "startIso": "2026-08-14T08:00:00.000Z",
+      "endIso": "2026-08-14T09:30:00.000Z"
+    },
+    {
+      "id": "P-004",
+      "title": "別處作者 03｜想在離亂的時代做個好人",
+      "type": "EVENT",
+      "description": "",
+      "date": "15 AUG",
+      "time": "18:30–20:00",
+      "url": "https://lu.ma/rvr64m0m",
+      "cover": "https://images.lumacdn.com/uploads/lx/acf1c13d-d2ef-46e7-92d8-6ff4e880e6a0.png",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": true,
+      "ticketPrice": null,
+      "startIso": "2026-08-15T08:30:00.000Z",
+      "endIso": "2026-08-15T10:00:00.000Z"
+    },
+    {
+      "id": "P-005",
+      "title": "别处放映25｜《時光的裂隙》特別放映及嘉宾在线交流（一）",
+      "type": "FILM SCREENING",
+      "description": "",
+      "date": "17 AUG",
+      "time": "18:00–19:30",
+      "url": "https://lu.ma/nm297zl1",
+      "cover": "https://images.lumacdn.com/uploads/zb/bd6b47b0-0de1-4bca-ab6d-a39cfb0dd2a9.png",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": true,
+      "ticketPrice": null,
+      "startIso": "2026-08-17T08:00:00.000Z",
+      "endIso": "2026-08-17T09:30:00.000Z"
+    },
+    {
+      "id": "P-006",
       "title": "別處作者 04｜為什麼還要寫詩？",
       "type": "EVENT",
       "description": "",
@@ -753,5 +798,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-08-02T21:49:12.147Z"
+  "fetchedAt": "2026-08-03T22:02:24.328Z"
 }
