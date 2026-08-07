@@ -10,7 +10,7 @@
       "url": "https://lu.ma/857aiasi",
       "cover": "https://images.lumacdn.com/uploads/86/93409d67-f88f-4301-bde2-0f5e45c6c1a8.jpg",
       "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": true,
+      "isFree": false,
       "ticketPrice": null,
       "startIso": "2026-08-08T04:00:00.000Z",
       "endIso": "2026-08-08T06:00:00.000Z"
@@ -798,5 +798,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-08-07T00:59:42.866Z"
+  "fetchedAt": "2026-08-07T21:32:45.264Z"
 }
