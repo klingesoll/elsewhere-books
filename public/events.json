@@ -10,7 +10,7 @@
       "url": "https://lu.ma/gy2b9f5c",
       "cover": "https://images.lumacdn.com/uploads/fn/72364bd1-f618-41ed-8403-3af7fcef53b4.png",
       "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": true,
+      "isFree": false,
       "ticketPrice": null,
       "startIso": "2026-08-14T08:00:00.000Z",
       "endIso": "2026-08-14T09:30:00.000Z"
@@ -40,7 +40,7 @@
       "url": "https://lu.ma/nm297zl1",
       "cover": "https://images.lumacdn.com/uploads/zb/bd6b47b0-0de1-4bca-ab6d-a39cfb0dd2a9.png",
       "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": true,
+      "isFree": false,
       "ticketPrice": null,
       "startIso": "2026-08-17T08:00:00.000Z",
       "endIso": "2026-08-17T09:30:00.000Z"
@@ -59,6 +59,21 @@
       "ticketPrice": null,
       "startIso": "2026-08-18T08:00:00.000Z",
       "endIso": "2026-08-18T09:30:00.000Z"
+    },
+    {
+      "id": "P-005",
+      "title": "別處共讀 04｜文學遇見電影",
+      "type": "EVENT",
+      "description": "",
+      "date": "6 SEPT",
+      "time": "18:00–20:00",
+      "url": "https://lu.ma/79kdkvfw",
+      "cover": "https://images.lumacdn.com/uploads/6w/2c316ad5-01c3-4bd9-8704-bb3550da26f7.png",
+      "location": "",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-09-06T08:00:00.000Z",
+      "endIso": "2026-09-06T10:00:00.000Z"
     }
   ],
   "past": [
@@ -312,7 +327,7 @@
       "url": "https://lu.ma/uq7xjscn",
       "cover": "https://images.lumacdn.com/event-covers/9p/4d9637ec-b899-4976-b583-5b969ca03659.png",
       "location": "level 3/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": true,
+      "isFree": false,
       "ticketPrice": null,
       "startIso": "2026-03-15T08:00:00.000Z",
       "endIso": "2026-03-15T09:30:00.000Z"
@@ -342,7 +357,7 @@
       "url": "https://lu.ma/5ewjkszx",
       "cover": "https://images.lumacdn.com/event-covers/zu/139dfc91-de5a-4ab1-b54a-113481fc8fdf.png",
       "location": "level 3/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": true,
+      "isFree": false,
       "ticketPrice": null,
       "startIso": "2026-03-08T08:00:00.000Z",
       "endIso": "2026-03-08T09:30:00.000Z"
@@ -537,7 +552,7 @@
       "url": "https://lu.ma/9wut2tm0",
       "cover": "https://images.lumacdn.com/event-covers/yg/9b8c4d8e-4860-4409-8c95-f81e6b10abfd.jpg",
       "location": "level 3/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": true,
+      "isFree": false,
       "ticketPrice": null,
       "startIso": "2025-10-17T07:30:00.000Z",
       "endIso": "2025-10-17T09:30:00.000Z"
@@ -792,11 +807,11 @@
       "url": "https://lu.ma/32i8ayrv",
       "cover": "https://images.lumacdn.com/gallery-images/3x/0c49385a-bea7-4769-b456-f0efaa0d6766.png",
       "location": "139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": false,
+      "isFree": true,
       "ticketPrice": null,
       "startIso": "2025-07-27T09:00:00.000Z",
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-08-10T21:34:58.165Z"
+  "fetchedAt": "2026-08-11T21:39:19.913Z"
 }
