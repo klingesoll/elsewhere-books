@@ -2,21 +2,6 @@
   "upcoming": [
     {
       "id": "P-001",
-      "title": "别处放映25｜《時光的裂隙》特別放映及嘉宾在线交流（一）",
-      "type": "FILM SCREENING",
-      "description": "",
-      "date": "17 AUG",
-      "time": "18:00–19:30",
-      "url": "https://lu.ma/nm297zl1",
-      "cover": "https://images.lumacdn.com/uploads/zb/bd6b47b0-0de1-4bca-ab6d-a39cfb0dd2a9.png",
-      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": false,
-      "ticketPrice": null,
-      "startIso": "2026-08-17T08:00:00.000Z",
-      "endIso": "2026-08-17T09:30:00.000Z"
-    },
-    {
-      "id": "P-002",
       "title": "別處作者 04｜為什麼還要寫詩？",
       "type": "EVENT",
       "description": "",
@@ -25,13 +10,13 @@
       "url": "https://lu.ma/hhf3o2he",
       "cover": "https://images.lumacdn.com/uploads/xl/98c4c416-6061-47f0-8410-63d6763152ee.png",
       "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": true,
+      "isFree": false,
       "ticketPrice": null,
       "startIso": "2026-08-18T08:00:00.000Z",
       "endIso": "2026-08-18T09:30:00.000Z"
     },
     {
-      "id": "P-003",
+      "id": "P-002",
       "title": "別處共讀 04｜文學遇見電影",
       "type": "EVENT",
       "description": "",
@@ -49,6 +34,21 @@
   "past": [
     {
       "id": "A-001",
+      "title": "别处放映25｜《時光的裂隙》特別放映及嘉宾在线交流（一）",
+      "type": "FILM SCREENING",
+      "description": "",
+      "date": "17 AUG",
+      "time": "18:00–19:30",
+      "url": "https://lu.ma/nm297zl1",
+      "cover": "https://images.lumacdn.com/uploads/zb/bd6b47b0-0de1-4bca-ab6d-a39cfb0dd2a9.png",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-08-17T08:00:00.000Z",
+      "endIso": "2026-08-17T09:30:00.000Z"
+    },
+    {
+      "id": "A-002",
       "title": "別處作者 03｜想在離亂的時代做個好人",
       "type": "EVENT",
       "description": "",
@@ -63,7 +63,7 @@
       "endIso": "2026-08-15T10:00:00.000Z"
     },
     {
-      "id": "A-002",
+      "id": "A-003",
       "title": "别处放映24｜MIFF入围导演影片特别放映：《我的AI恋人》和导演丑娃现场交流",
       "type": "FILM SCREENING",
       "description": "",
@@ -78,7 +78,7 @@
       "endIso": "2026-08-14T09:30:00.000Z"
     },
     {
-      "id": "A-003",
+      "id": "A-004",
       "title": "女权社群后，离开的，留下的…",
       "type": "EVENT",
       "description": "",
@@ -93,7 +93,7 @@
       "endIso": "2026-08-09T11:00:00.000Z"
     },
     {
-      "id": "A-004",
+      "id": "A-005",
       "title": "《秽语癖》新书发布与自出版对谈",
       "type": "BOOK LAUNCH",
       "description": "",
@@ -108,7 +108,7 @@
       "endIso": "2026-08-08T06:00:00.000Z"
     },
     {
-      "id": "A-005",
+      "id": "A-006",
       "title": "Dragon Inn 龙门客栈 （限时优惠）",
       "type": "EVENT",
       "description": "",
@@ -123,7 +123,7 @@
       "endIso": "2026-08-02T06:00:00.000Z"
     },
     {
-      "id": "A-006",
+      "id": "A-007",
       "title": "華語酷兒電影·劇情短片",
       "type": "EVENT",
       "description": "",
@@ -138,7 +138,7 @@
       "endIso": "2026-07-30T10:15:00.000Z"
     },
     {
-      "id": "A-007",
+      "id": "A-008",
       "title": "別處兩說 01｜南枝應不應該向淑柔隱瞞木生的死訊？",
       "type": "EVENT",
       "description": "",
@@ -153,7 +153,7 @@
       "endIso": "2026-07-28T09:30:00.000Z"
     },
     {
-      "id": "A-008",
+      "id": "A-009",
       "title": "Purple Flag Publications’ Book Sharing",
       "type": "EVENT",
       "description": "",
@@ -168,7 +168,7 @@
       "endIso": "2026-07-21T09:30:00.000Z"
     },
     {
-      "id": "A-009",
+      "id": "A-010",
       "title": "《十年》/《Ten Years》@Ritz Cinema in Sydney",
       "type": "EVENT",
       "description": "",
@@ -183,7 +183,7 @@
       "endIso": "2026-07-19T06:10:00.000Z"
     },
     {
-      "id": "A-010",
+      "id": "A-011",
       "title": "《十年》/《Ten Years》@LIDO Cinema in Melbourne",
       "type": "EVENT",
       "description": "",
@@ -198,7 +198,7 @@
       "endIso": "2026-07-19T06:10:00.000Z"
     },
     {
-      "id": "A-011",
+      "id": "A-012",
       "title": "華語酷兒電影全球聯展｜紀實短片單元",
       "type": "SMALL PRESS",
       "description": "",
@@ -213,7 +213,7 @@
       "endIso": "2026-07-16T10:30:00.000Z"
     },
     {
-      "id": "A-012",
+      "id": "A-013",
       "title": "故土.江湖.流亡",
       "type": "EVENT",
       "description": "",
@@ -228,7 +228,7 @@
       "endIso": "2026-07-05T10:00:00.000Z"
     },
     {
-      "id": "A-013",
+      "id": "A-014",
       "title": "Storm Under the Sun 红日风暴 (优惠票截止，请移步ACMI现场购票)",
       "type": "EVENT",
       "description": "",
@@ -243,7 +243,7 @@
       "endIso": "2026-07-05T05:50:00.000Z"
     },
     {
-      "id": "A-014",
+      "id": "A-015",
       "title": "書業同行錄之三：當我們終於可以說愛",
       "type": "EVENT",
       "description": "",
@@ -258,7 +258,7 @@
       "endIso": "2026-06-25T09:30:00.000Z"
     },
     {
-      "id": "A-015",
+      "id": "A-016",
       "title": "《彩虹伴我行》（Papa Rainbow）放映暨導演連線",
       "type": "FILM SCREENING",
       "description": "",
@@ -273,7 +273,7 @@
       "endIso": "2026-06-18T11:00:00.000Z"
     },
     {
-      "id": "A-016",
+      "id": "A-017",
       "title": "《双》《那些你不知道的事》《几面》放映&导演连线",
       "type": "FILM SCREENING",
       "description": "",
@@ -288,7 +288,7 @@
       "endIso": "2026-06-11T11:00:00.000Z"
     },
     {
-      "id": "A-017",
+      "id": "A-018",
       "title": "白樺林、酒精，與消逝之前｜《敖魯古雅，敖魯古雅》放映暨映後談",
       "type": "FILM SCREENING",
       "description": "",
@@ -303,7 +303,7 @@
       "endIso": "2026-05-22T10:30:00.000Z"
     },
     {
-      "id": "A-018",
+      "id": "A-019",
       "title": "《秉爱》放映&連線— 秉何所在？在土地里，在流水里，在她的鬥爭里",
       "type": "FILM SCREENING",
       "description": "",
@@ -318,7 +318,7 @@
       "endIso": "2026-05-07T11:00:00.000Z"
     },
     {
-      "id": "A-019",
+      "id": "A-020",
       "title": "电影还没完｜观众自由交流 《小雁与吴爱丽》",
       "type": "EVENT",
       "description": "",
@@ -333,7 +333,7 @@
       "endIso": "2026-03-15T09:30:00.000Z"
     },
     {
-      "id": "A-020",
+      "id": "A-021",
       "title": "向山海走去｜山海計劃2026全球路演墨爾本站",
       "type": "EVENT",
       "description": "",
@@ -348,7 +348,7 @@
       "endIso": "2026-03-13T10:00:00.000Z"
     },
     {
-      "id": "A-021",
+      "id": "A-022",
       "title": "电影还没完｜观众自由交流 《恋爱与义务》话题：爱情与义务之间 - 阮玲玉与现代女性",
       "type": "EVENT",
       "description": "",
@@ -363,7 +363,7 @@
       "endIso": "2026-03-08T09:30:00.000Z"
     },
     {
-      "id": "A-022",
+      "id": "A-023",
       "title": "书业同行录之一：在东京重造中文阅读 · 中文如何在离散语境成为一种共同实践？",
       "type": "EVENT",
       "description": "",
@@ -378,7 +378,7 @@
       "endIso": "2026-03-07T06:00:00.000Z"
     },
     {
-      "id": "A-023",
+      "id": "A-024",
       "title": "《To Say Farewell》放映暨映後座談 — 致高耀潔的最後時光",
       "type": "FILM SCREENING",
       "description": "",
@@ -393,7 +393,7 @@
       "endIso": "2026-01-06T10:00:00.000Z"
     },
     {
-      "id": "A-024",
+      "id": "A-025",
       "title": "「离开的、留下的」短片系列 · 《相聚一刻》《我在家中渐渐消失》与《像杂草一样》放映&导演连线",
       "type": "FILM SCREENING",
       "description": "",
@@ -408,7 +408,7 @@
       "endIso": "2025-12-23T10:00:00.000Z"
     },
     {
-      "id": "A-025",
+      "id": "A-026",
       "title": "「诗」短片系列 · 《饿死诗人》 《潮》与 《诗人不在屋里》放映&连线张维导演",
       "type": "FILM SCREENING",
       "description": "",
@@ -423,7 +423,7 @@
       "endIso": "2025-12-04T10:00:00.000Z"
     },
     {
-      "id": "A-026",
+      "id": "A-027",
       "title": "从旧金山到新金山：华人淘金的全球史",
       "type": "EVENT",
       "description": "",
@@ -438,7 +438,7 @@
       "endIso": "2025-11-22T10:00:00.000Z"
     },
     {
-      "id": "A-027",
+      "id": "A-028",
       "title": "《說廢話的人》 放映以及映後交流「The men talking nonsense」Screening and Q&A",
       "type": "FILM SCREENING",
       "description": "",
@@ -453,7 +453,7 @@
       "endIso": "2025-11-07T10:00:00.000Z"
     },
     {
-      "id": "A-028",
+      "id": "A-029",
       "title": "「在场与立场」之四：对话作家导演张赞波➕《春山来客》放映",
       "type": "FILM SCREENING",
       "description": "",
@@ -468,7 +468,7 @@
       "endIso": "2025-10-26T06:00:00.000Z"
     },
     {
-      "id": "A-029",
+      "id": "A-030",
       "title": "别处晨跑-26 Oct",
       "type": "EVENT",
       "description": "",
@@ -483,7 +483,7 @@
       "endIso": "2025-10-25T22:30:00.000Z"
     },
     {
-      "id": "A-030",
+      "id": "A-031",
       "title": "「在场与立场」之三：《大路》修订版发布会+《大路朝天》放映+导演交流和签售",
       "type": "FILM SCREENING",
       "description": "",
@@ -498,7 +498,7 @@
       "endIso": "2025-10-25T10:00:00.000Z"
     },
     {
-      "id": "A-031",
+      "id": "A-032",
       "title": "The Recorder’s Presence and Position（二）: Indie Doc 'Falling from the Sky' + Director’s Book Signin",
       "type": "EVENT",
       "description": "",
@@ -513,7 +513,7 @@
       "endIso": "2025-10-23T10:00:00.000Z"
     },
     {
-      "id": "A-032",
+      "id": "A-033",
       "title": "记录者的在场与立场系列活动之二：豆瓣無條目華語獨立紀錄片《天降》放映 ＋ 導演現場書籍簽售",
       "type": "FILM SCREENING",
       "description": "",
@@ -528,7 +528,7 @@
       "endIso": "2025-10-23T10:00:00.000Z"
     },
     {
-      "id": "A-033",
+      "id": "A-034",
       "title": "别处晨跑-19 Oct",
       "type": "EVENT",
       "description": "",
@@ -543,7 +543,7 @@
       "endIso": "2025-10-18T22:30:00.000Z"
     },
     {
-      "id": "A-034",
+      "id": "A-035",
       "title": "《大兴失火》放映以及映后交流 「Daxing On Fire」Screening and Q&A",
       "type": "FILM SCREENING",
       "description": "",
@@ -558,7 +558,7 @@
       "endIso": "2025-10-17T09:30:00.000Z"
     },
     {
-      "id": "A-035",
+      "id": "A-036",
       "title": "在〈大象〉之外，未竟之語：胡波短片放映與交流胡波短片放映与交流",
       "type": "FILM SCREENING",
       "description": "",
@@ -573,7 +573,7 @@
       "endIso": "2025-10-12T10:00:00.000Z"
     },
     {
-      "id": "A-036",
+      "id": "A-037",
       "title": "记录者的在场与立场系列活动之一：豆瓣8.6高分华语独立纪录片《有一种静叫庄严》放映+导演线上映后",
       "type": "FILM SCREENING",
       "description": "",
@@ -588,7 +588,7 @@
       "endIso": "2025-10-09T10:00:00.000Z"
     },
     {
-      "id": "A-037",
+      "id": "A-038",
       "title": "聊聊酷儿理论｜直人思维、反性宣言与反工作政治",
       "type": "EVENT",
       "description": "",
@@ -603,7 +603,7 @@
       "endIso": "2025-09-20T09:00:00.000Z"
     },
     {
-      "id": "A-038",
+      "id": "A-039",
       "title": "Bury your gays? 影视与文学中的酷儿悲剧？",
       "type": "EVENT",
       "description": "",
@@ -618,7 +618,7 @@
       "endIso": "2025-09-13T07:00:00.000Z"
     },
     {
-      "id": "A-039",
+      "id": "A-040",
       "title": "《走進巴別塔》放映以及映后交流 「Welcome To Babel」Screening and Q&A",
       "type": "FILM SCREENING",
       "description": "",
@@ -633,7 +633,7 @@
       "endIso": "2025-09-12T11:30:00.000Z"
     },
     {
-      "id": "A-040",
+      "id": "A-041",
       "title": "交换一本书，遇见一个人·傍晚自由场",
       "type": "EVENT",
       "description": "",
@@ -648,7 +648,7 @@
       "endIso": "2025-09-06T07:00:00.000Z"
     },
     {
-      "id": "A-041",
+      "id": "A-042",
       "title": "交换一本书，遇见一个人·午后文学场",
       "type": "EVENT",
       "description": "",
@@ -663,7 +663,7 @@
       "endIso": "2025-09-06T05:30:00.000Z"
     },
     {
-      "id": "A-042",
+      "id": "A-043",
       "title": "《世外桃源》放映及導演映後交流",
       "type": "FILM SCREENING",
       "description": "",
@@ -678,7 +678,7 @@
       "endIso": "2025-08-30T11:00:00.000Z"
     },
     {
-      "id": "A-043",
+      "id": "A-044",
       "title": "《之後的一週》放映與導演交流",
       "type": "FILM SCREENING",
       "description": "",
@@ -693,7 +693,7 @@
       "endIso": "2025-08-28T11:00:00.000Z"
     },
     {
-      "id": "A-044",
+      "id": "A-045",
       "title": "輪值店長店務會議-24 AUG 2025",
       "type": "EVENT",
       "description": "",
@@ -708,7 +708,7 @@
       "endIso": "2025-08-24T10:30:00.000Z"
     },
     {
-      "id": "A-045",
+      "id": "A-046",
       "title": "《文学讲稿》读书会",
       "type": "READING GROUP",
       "description": "",
@@ -723,7 +723,7 @@
       "endIso": "2025-08-24T06:00:00.000Z"
     },
     {
-      "id": "A-046",
+      "id": "A-047",
       "title": "在場▪️Elsewhere Books「別放」紀錄片短片放映與交流",
       "type": "FILM SCREENING",
       "description": "",
@@ -738,7 +738,7 @@
       "endIso": "2025-08-16T07:00:00.000Z"
     },
     {
-      "id": "A-047",
+      "id": "A-048",
       "title": "書店構想",
       "type": "EVENT",
       "description": "",
@@ -753,7 +753,7 @@
       "endIso": "2025-08-15T10:30:00.000Z"
     },
     {
-      "id": "A-048",
+      "id": "A-049",
       "title": "《青春：春》放映與討論 Youth (Spring) Screening & Discussion",
       "type": "FILM SCREENING",
       "description": "",
@@ -768,7 +768,7 @@
       "endIso": "2025-08-14T12:00:00.000Z"
     },
     {
-      "id": "A-049",
+      "id": "A-050",
       "title": "理想國的邊界 - 晉江導演交流",
       "type": "EVENT",
       "description": "",
@@ -783,7 +783,7 @@
       "endIso": "2025-08-10T10:30:00.000Z"
     },
     {
-      "id": "A-050",
+      "id": "A-051",
       "title": "別處書社輪值店長店務會議",
       "type": "EVENT",
       "description": "",
@@ -798,7 +798,7 @@
       "endIso": "2025-08-03T10:00:00.000Z"
     },
     {
-      "id": "A-051",
+      "id": "A-052",
       "title": "別處書社選書人第一次討論會",
       "type": "EVENT",
       "description": "",
@@ -813,5 +813,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-08-16T21:13:48.070Z"
+  "fetchedAt": "2026-08-17T21:19:40.319Z"
 }
