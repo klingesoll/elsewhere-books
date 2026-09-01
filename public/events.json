@@ -29,6 +29,21 @@
       "ticketPrice": null,
       "startIso": "2026-09-10T08:00:00.000Z",
       "endIso": "2026-09-10T09:30:00.000Z"
+    },
+    {
+      "id": "P-003",
+      "title": "書業同行錄 04｜在離散中聚攏：壹嘉十一年與海外華語文化社群",
+      "type": "EVENT",
+      "description": "",
+      "date": "12 SEPT",
+      "time": "14:00–15:30",
+      "url": "https://lu.ma/u3qo12wh",
+      "cover": "https://images.lumacdn.com/uploads/yv/6549c409-956b-461b-82dd-02271a941a4d.png",
+      "location": "",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-09-12T04:00:00.000Z",
+      "endIso": "2026-09-12T05:30:00.000Z"
     }
   ],
   "past": [
@@ -963,5 +978,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-08-30T23:03:09.500Z"
+  "fetchedAt": "2026-09-01T00:18:20.290Z"
 }
