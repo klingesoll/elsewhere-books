@@ -2,21 +2,6 @@
   "upcoming": [
     {
       "id": "P-001",
-      "title": "別處放映 26｜《時光的裂隙》特別放映及嘉賓線上交流（二）",
-      "type": "FILM SCREENING",
-      "description": "",
-      "date": "10 SEPT",
-      "time": "18:00–19:30",
-      "url": "https://lu.ma/i1m7hhmx",
-      "cover": "https://images.lumacdn.com/uploads/ch/534bb132-7bd2-424f-94eb-21fc75ac51ad.png",
-      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": false,
-      "ticketPrice": null,
-      "startIso": "2026-09-10T08:00:00.000Z",
-      "endIso": "2026-09-10T09:30:00.000Z"
-    },
-    {
-      "id": "P-002",
       "title": "書業同行錄 04｜在離散中聚攏：壹嘉十一年與海外華語文化社群",
       "type": "EVENT",
       "description": "",
@@ -29,6 +14,21 @@
       "ticketPrice": null,
       "startIso": "2026-09-12T04:00:00.000Z",
       "endIso": "2026-09-12T05:30:00.000Z"
+    },
+    {
+      "id": "P-002",
+      "title": "別處放映 26｜《時光的裂隙》特別放映及嘉賓線上交流（二）",
+      "type": "FILM SCREENING",
+      "description": "",
+      "date": "19 SEPT",
+      "time": "12:30–14:00",
+      "url": "https://lu.ma/i1m7hhmx",
+      "cover": "https://images.lumacdn.com/uploads/ch/534bb132-7bd2-424f-94eb-21fc75ac51ad.png",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-09-19T02:30:00.000Z",
+      "endIso": "2026-09-19T04:00:00.000Z"
     }
   ],
   "past": [
@@ -978,5 +978,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-09-09T22:51:59.183Z"
+  "fetchedAt": "2026-09-10T22:53:04.486Z"
 }
