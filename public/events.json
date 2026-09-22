@@ -14,6 +14,21 @@
       "ticketPrice": null,
       "startIso": "2026-10-04T03:00:00.000Z",
       "endIso": "2026-10-04T05:00:00.000Z"
+    },
+    {
+      "id": "P-002",
+      "title": "大象之外，未竟之语：胡波短片放映",
+      "type": "FILM SCREENING",
+      "description": "",
+      "date": "7 OCT",
+      "time": "18:30–20:00",
+      "url": "https://lu.ma/hyh389ea",
+      "cover": "https://images.lumacdn.com/uploads/aw/0f3cfa9d-4bc0-445a-bf32-ed172cca9489.jpg",
+      "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
+      "isFree": false,
+      "ticketPrice": null,
+      "startIso": "2026-10-07T07:30:00.000Z",
+      "endIso": "2026-10-07T09:00:00.000Z"
     }
   ],
   "past": [
@@ -993,5 +1008,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-09-21T23:45:46.789Z"
+  "fetchedAt": "2026-09-22T23:24:58.272Z"
 }
