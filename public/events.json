@@ -10,7 +10,7 @@
       "url": "https://lu.ma/rzeiavd7",
       "cover": "https://images.lumacdn.com/uploads/jl/06d1d787-4121-48f3-a210-99f8c9996b3c.jpg",
       "location": "Elsewhere Books 別處書社, 3rd Floor/139 Franklin St, Melbourne VIC 3000, Australia",
-      "isFree": true,
+      "isFree": false,
       "ticketPrice": null,
       "startIso": "2026-10-04T03:00:00.000Z",
       "endIso": "2026-10-04T05:00:00.000Z"
@@ -1008,5 +1008,5 @@
       "endIso": "2025-07-27T10:30:00.000Z"
     }
   ],
-  "fetchedAt": "2026-10-01T00:18:19.018Z"
+  "fetchedAt": "2026-10-02T00:25:21.301Z"
 }
